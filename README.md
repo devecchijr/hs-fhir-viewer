@@ -23,27 +23,22 @@ unzip the dist.zip file to a folder of your choice on your app web server.
 
 Open the yourFolder/assets/demo/data/configProd.json file.
 
-Set the defaultLocale property pointing to your locale file.
+## FHIR URL
 
+In order to point the application at your backend FHIR API, you need set up the following properties: 
 Ex:
 ```
-"defaultLocale":"pt-br",
-```
-To enable other locales you can work with the localeOptions property
-
-Ex:
-```
- "localeOptions":[
-    {"label": "br portuguese", "value": "pt-br"},
-    {"label": "english", "value": "en"},
-    {"label": "french", "value": "fr"},
-    {"label": "german", "value":"de"},
-    {"label": "spanish", "value":"es-ch"},
-    {"label": "my locale", "value":"myLocaleJsonFile"},
-  ],
+...
+  "fhirBaseUrl":"http://localhost:57772/csp/healthshare/fhirag/fhiraccess",
+  "fhirAuthorization":"Basic X3N5c3RlbTpzeXM=",
+...
 ```
 
-To create a new locale json file you can use the sample files available at the same folder Ex: (pt-br, en, fr, es-ch, etc). Each label corresponds to some piece of content on this application. In order to make the things easier the main part are grouped by component or clinical type.
+## Localization
+
+There are some available locales to use in your demo but you can configure your own locale:
+
+To create a new locale json file you can use the samples available at the same folder Ex: (pt-br.json, en.json, fr.json, es-ch.json, etc). Each label corresponds to some piece of content on this application. In order to make the things easier the main part are grouped by component or clinical type.
 
 Ex:
 ```
@@ -67,6 +62,29 @@ Ex:
   "placeholder_birthDate": "Date de naissance",
   ...
   ```
+
+Set the defaultLocale property pointing to your locale file.
+
+Ex:
+```
+"defaultLocale":"myLocalFile",
+...
+```
+To enable other locales to final user you can work with the localeOptions property.  
+
+Ex:
+```
+ "localeOptions":[
+    {"label": "br portuguese", "value": "pt-br"},
+    {"label": "english", "value": "en"},
+    {"label": "french", "value": "fr"},
+    {"label": "german", "value":"de"},
+    {"label": "spanish", "value":"es-ch"},
+    {"label": "my locale", "value":"myLocaleJsonFile"},
+  ],
+```
+
+
 
 
 
