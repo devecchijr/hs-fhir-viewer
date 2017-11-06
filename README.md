@@ -85,6 +85,38 @@ Ex:
 ```
 
 
+## Using node js as web server
+
+You can serve this app using node js. For that, unzip the host.zip file to a folder of your choice.
+
+Inside the folder, install the packages needed
+
+```
+npm install
+```
+
+Open host.js file and point to the index.html app location at the following line: 
+```
+res.sendFile(path.resolve(__dirname, '../dist/index.html'));
+```
+
+If you prefer, you can proxy the backend API to the same port to avoid CORS problems (optional).
+```
+server.use('/csp', proxy({target: 'http://localhost:57772', changeOrigin: true}));
+```
+
+If can also change the listening port:
+```
+httpServer.listen(3000, () => {
+  console.log('Listening on: http://localhost:3000');
+});
+```
+
+Save your host.js file and run it with node command or if you prefer with nodemon.
+```
+node host
+```
+
 
 
 
