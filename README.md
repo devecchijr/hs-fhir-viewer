@@ -85,7 +85,10 @@ Ex:
 ```
 
 
-## Using node js as web server
+## Using node js as a Web Server
+
+Prerequisites: npm installed.
+https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm
 
 You can serve this app using node js. For that, unzip the host.zip file to a folder of your choice.
 
@@ -112,7 +115,7 @@ httpServer.listen(3000, () => {
 });
 ```
 
-Save your host.js file and run it with node command or if you prefer with nodemon.
+Save your host.js file and run it with node or nodemon command.
 ```
 node host
 ```
