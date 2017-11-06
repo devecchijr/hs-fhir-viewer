@@ -3,7 +3,7 @@ A demo application using the power of Healthshare Information Exchange and FHIR 
 
 ## Setting up Healthshare side
 
-Pre-requesites: You'll need a FHIR enabled Information Exchange Installation. 
+Prerequisite: You'll need a FHIR enabled Information Exchange Installation. 
 
 If you don't have a FHIR access gateway production, you can set this up using the following command:
 ```
@@ -11,9 +11,9 @@ Zn “hslib”
 Do ##class(HS.Util.Installer).InstallFHIRAccessGateway(“FHIRAG”)
 ```
 It will create an application with the following URL:
-/csp/healthshare/fhirag/fhiraccess: 
+/csp/healthshare/fhirag/fhiraccess:
 
-This is the app to use for FHIR Access Gateway interactions.  This app has Password authentication enabled. For demo purposes, you can disabled it.
+This is the app to use for FHIR Access Gateway interactions. This app has Password authentication enabled. For demo purposes, you can disabled it.
 
 You will want to point the FHIR AG at your Information Exchange instance.  In the Management Portal for the HSFHIRACCESS namespace, use the Service Registry UI to modify the HSREGISTRY and HSACCESS registry entries to point to your HealthShare IE instance.
 
