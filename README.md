@@ -17,6 +17,8 @@ This is the app to use for FHIR Access Gateway interactions. This app has Passw
 
 You will want to point the FHIR AG at your Information Exchange instance.  In the Management Portal for the HSFHIRACCESS namespace, use the Service Registry UI to modify the HSREGISTRY and HSACCESS registry entries to point to your HealthShare IE instance.
 
+In FHIR Access Gateway, is needed to set the parameter SessionMode = “Parameter” at HS.FHIR.AccessGatewayService component, which establishes a session with the client side based on a parameter called “iscSessionId”.
+
 ## Setting up client side
 
 unzip the dist.zip file to a folder of your choice on your app web server.
